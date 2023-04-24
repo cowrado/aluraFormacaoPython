@@ -11,7 +11,7 @@ pontos = 1000
 print("Qual nível de dificuldade ?")
 print("(1) Fácil, (2) Médio, (3) Difícil")
 
-nivel = int(input("Define o nível"))
+nivel = int(input("Defina o nível: "))
 
 if (nivel == 1):
     total_de_tentativas = 20
@@ -43,4 +43,7 @@ for rodada in range(1, total_de_tentativas+1):
         print("Você errou. Seu chute foi menor que o número secreto.")
         pontos -= abs(numero_secreto - chute)
 
-print("Fim de jogo. O número secreto era {}".format(numero_secreto))
+    if(rodada == total_de_tentativas):
+        print("O número secreto era {}. Você fez {}".format(numero_secreto, pontos))
+
+print("Fim de jogo.")
